@@ -1,9 +1,13 @@
 from tkinter import *
+from tkinter.ttk import *
+
+
 
 tela_inicial = Tk()
 
 def botao_1():
     texto1['text']= entrada.get()
+    texto2['text']= combo.get()
 
 
 
@@ -13,34 +17,43 @@ tela_inicial.title('Janela 1')
 tela_inicial.geometry('1300x600+50+10')
 
 #Criando botâo
-botao = Button(tela_inicial, text = 'clique aqui!!', bg = 'yellow', command=botao_1)  
+botao = Button(tela_inicial, text = 'clique aqui!!', command=botao_1)  
 
 #Criando Entrada
 entrada = Entry(tela_inicial)
 
+#Criando a combobox
+combo = Combobox(tela_inicial)
+combo['values'] = ('oi', 'adeus', 'beijos', 'tchau', 'olá')
+combo.current(0)
+
+
 # criando os Label
-texto = Label(tela_inicial,  text='oi', width= 40, justify=LEFT, bg="red")
-texto1 = Label(tela_inicial, text='oi', width= 15, justify=LEFT, bg="yellow")
-texto2 = Label(tela_inicial, text='oi', width=20, justify=LEFT, bg="pink")
-texto3 = Label(tela_inicial, text='oi', width=20, justify=LEFT, bg="blue")
-texto4 = Label(tela_inicial, text='oi', width=20, justify=LEFT, bg="gray")
-texto5 = Label(tela_inicial, text='oi', width=20, justify=LEFT, bg="brown")
-texto6 = Label(tela_inicial, text='oi', width=20, justify=LEFT, bg="beige")
+texto = Label(tela_inicial,  text='oi', width= 20)
+texto1 = Label(tela_inicial, text='oi', width= 15)
+texto2 = Label(tela_inicial, text='oi', width=20)
+texto3 = Label(tela_inicial, text='oi', width=20)
+texto4 = Label(tela_inicial, text='oi', width=20)
+texto5 = Label(tela_inicial, text='oi', width=20)
+texto6 = Label(tela_inicial, text='oi', width=20)
 
 #colocando Label na tela
-texto.pack(side=LEFT, fill=BOTH, expand=1)
-texto1.pack(side=LEFT, fill=BOTH, expand=1)
-texto2.pack(side=LEFT, fill=BOTH, expand=1)
-texto3.pack(side=LEFT, fill=BOTH, expand=1)
-texto4.pack(side=LEFT, fill=BOTH, expand=1)
-texto5.pack(side=LEFT, fill=BOTH, expand=1)
-texto6.pack(side=LEFT, fill=BOTH, expand=1) 
+texto.pack(side=TOP, fill=BOTH)
+texto1.pack(side=LEFT, fill=BOTH)
+texto2.pack(side=LEFT, fill=BOTH)
+texto3.pack(side=LEFT, fill=BOTH)
+texto4.pack(side=LEFT, fill=BOTH)
+texto5.pack(side=LEFT, fill=BOTH)
+texto6.pack(side=LEFT, fill=BOTH) 
 
 #colocando Label na tela
-botao.pack(side=LEFT, fill=BOTH, expand=1 )
+botao.pack()
 
 #colocando Entry na tela
 entrada.pack()
+
+#colocando cobobox na tela
+combo.pack()
 
   
 
