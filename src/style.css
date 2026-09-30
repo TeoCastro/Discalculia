@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  background: #e0e0e0;
+}
+
+/* Label no topo — ocupa toda a largura */
+.label-top {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  border: 1px solid #b0b0b0;
+  background: #f0f0f0;
+  box-sizing: border-box;
+}
+
+/* Linha de labels lado a lado */
+.label-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.label-cell {
+  flex: 1;
+  padding: 8px 4px;
+  text-align: center;
+  border: 1px solid #b0b0b0;
+  border-left: none;
+  background: #f0f0f0;
+  min-height: 20px;
+}
+
+.label-cell:first-child {
+  border-left: 1px solid #b0b0b0;
+}
+
+/* Controles */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button {
+  padding: 8px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input,
+select {
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 260px;
+}
